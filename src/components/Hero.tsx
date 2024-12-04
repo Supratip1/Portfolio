@@ -47,6 +47,36 @@ export default function Hero() {
         />
       </motion.div>
 
+      {/* Particles */}
+      <motion.div 
+        className="absolute inset-0 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ duration: 2 }}
+      >
+        {[...Array(50)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-white/50 rounded-full"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`
+            }}
+            animate={{
+              y: [0, 20, 0],
+              opacity: [1, 0.5, 1]
+            }}
+            transition={{
+              duration: Math.random() * 3 + 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: Math.random() * 2
+            }}
+          />
+        ))}
+      </motion.div>
+
+      {/* Hero Section */}
       <motion.div 
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center relative z-10"
         variants={staggerContainer}
@@ -137,8 +167,11 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/50" />
+      {/* Animated Background with Noise */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-b from-purple-700 via-gray-900 to-black"
+        style={{ backgroundImage: "url('/path-to-noise-texture.png')", opacity: 0.5 }}
+      />
     </section>
   );
 }
