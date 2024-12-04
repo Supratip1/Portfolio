@@ -1,3 +1,3 @@
 # Portfolio
-Live Link : https://moonlit-bienenstitch-0bdc06.netlify.app/
+Live Link : https://www.supratip.tech
 Tech Stack : Typescript, React, Framer Motion
