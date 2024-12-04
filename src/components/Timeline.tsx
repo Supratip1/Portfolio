@@ -40,7 +40,7 @@ export default function Timeline() {
               >
                 {/* Icon */}
                 <div
-                  className={`flex justify-center items-center w-12 h-12 rounded-full bg-indigo-600 mb-4 lg:mb-0 lg:absolute lg:top-0 lg:left-1/2 transform -translate-x-1/2 ${
+                  className={`flex justify-center items-center w-12 h-12 rounded-full bg-indigo-600 mb-4 ml-3 lg:mb-0 lg:absolute lg:top-0 lg:left-1/2 transform -translate-x-1/2 ${
                     index % 2 === 0 ? 'lg:left-[calc(50% + 1rem)]' : 'lg:left-[calc(50% - 1rem)]'
                   }`}
                 >
