@@ -69,8 +69,14 @@ export default function Navbar() {
     <nav className="fixed w-full bg-gradient-to-r from-purple-700 via-indigo-500 to-blue-500 backdrop-blur-sm z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
+          {/* Logo and Name */}
+          <div className="flex items-center space-x-3">
+            {/* Logo */}
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center shadow-md">
+              <span className="text-white text-xl font-bold">S</span>
+            </div>
+
+            {/* Name */}
             <a
               onClick={() => scrollToSection('#hero')}
               className="text-lg md:text-xl lg:text-2xl font-bold text-white cursor-pointer whitespace-nowrap"

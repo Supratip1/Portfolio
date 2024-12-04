@@ -1,46 +1,48 @@
-import { Code, Database, Globe, Palette, Server, Terminal } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer } from '../utils/animations';
+import { Code, Database, Globe, Palette, Server, Terminal } from "lucide-react";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "../utils/animations";
 
+// Skills data
 const skills = [
   {
-    category: 'Frontend Development',
+    category: "Frontend Development",
     icon: Globe,
-    skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Redux'],
+    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Redux"],
   },
   {
-    category: 'Backend Development',
+    category: "Backend Development",
     icon: Server,
-    skills: ['Node.js', 'Python', 'REST APIs'],
+    skills: ["Node.js", "Python", "REST APIs"],
   },
   {
-    category: 'Database',
+    category: "Database",
     icon: Database,
-    skills: ['PostgreSQL', 'MongoDB', 'Redis', 'Firebase'],
+    skills: ["PostgreSQL", "MongoDB", "Redis", "Firebase"],
   },
   {
-    category: 'DevOps',
+    category: "DevOps",
     icon: Terminal,
-    skills: ['Docker', 'AWS', 'CI/CD', 'Linux', 'Git'],
+    skills: ["Docker", "AWS", "CI/CD", "Linux", "Git"],
   },
   {
-    category: 'Programming Languages',
+    category: "Programming Languages",
     icon: Code,
-    skills: ['JavaScript', 'TypeScript', 'Python','C++'],
+    skills: ["JavaScript", "TypeScript", "Python", "C++"],
   },
   {
-    category: 'Design',
+    category: "Design",
     icon: Palette,
-    skills: ['Figma', 'UI/UX', 'Responsive Design'],
+    skills: ["Figma", "UI/UX", "Responsive Design"],
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2 
-          className="text-3xl md:text-4xl font-bold text-center mb-16"
+        {/* Title */}
+        <motion.h2
+          className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mb-16"
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"
@@ -48,9 +50,10 @@ export default function Skills() {
         >
           Skills & Expertise
         </motion.h2>
-        
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+
+        {/* Skills Grid */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
@@ -61,28 +64,29 @@ export default function Skills() {
             return (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-md"
+                className="bg-white p-8 rounded-2xl shadow-lg transition-transform hover:scale-105"
                 variants={fadeInUp}
-                whileHover={{ 
-                  y: -8,
-                  transition: { duration: 0.3 }
-                }}
               >
-                <motion.div 
-                  className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-6"
+                {/* Icon */}
+                <motion.div
+                  className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-6 shadow-md"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
                   <Icon className="w-6 h-6 text-indigo-600" />
                 </motion.div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>
-                
+
+                {/* Category Title */}
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {category.category}
+                </h3>
+
+                {/* Skills */}
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
                     <motion.span
                       key={skillIndex}
-                      className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
+                      className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium transition-transform"
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.2 }}
                     >
