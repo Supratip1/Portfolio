@@ -1,4 +1,4 @@
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, FileText } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#hero" className="text-2xl font-bold text-gray-900">
-            Portfolio
+            Supratip | Developer
           </a>
 
           {/* Desktop Navigation */}
@@ -20,14 +20,17 @@ export default function Navbar() {
             <a href="#projects" className="text-gray-700 hover:text-gray-900 transition-colors">Projects</a>
             <a href="#contact" className="text-gray-700 hover:text-gray-900 transition-colors">Contact</a>
             <div className="flex items-center space-x-4">
-              <a href="https://github.com/Supratip1" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
+              <a href="https://github.com/Supratip1" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900" title="GitHub">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/in/supratip/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
+              <a href="https://www.linkedin.com/in/supratip/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900" title="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="mailto:supratipbhattacharya2@gmail.com" className="text-gray-700 hover:text-gray-900">
+              <a href="mailto:supratipbhattacharya2@gmail.com" className="text-gray-700 hover:text-gray-900" title="Email">
                 <Mail className="w-5 h-5" />
+              </a>
+              <a href="https://drive.google.com/file/d/1eAS8KV77d9jaCVnvledI5s-tVe2SJEAd/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900" title="Resume">
+                <FileText className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -50,14 +53,17 @@ export default function Navbar() {
               <a href="#projects" className="text-gray-700 hover:text-gray-900" onClick={() => setIsOpen(false)}>Projects</a>
               <a href="#contact" className="text-gray-700 hover:text-gray-900" onClick={() => setIsOpen(false)}>Contact</a>
               <div className="flex space-x-4 py-2">
-                <a href="https://github.com/Supratip1" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
+                <a href="https://github.com/Supratip1" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900" title="GitHub">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href=" https://www.linkedin.com/in/supratip/"target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
+                <a href="https://www.linkedin.com/in/supratip/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900" title="LinkedIn">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="mailto:supratipbhattacharya2@gmail.com" className="text-gray-700 hover:text-gray-900">
+                <a href="mailto:supratipbhattacharya2@gmail.com" className="text-gray-700 hover:text-gray-900" title="Email">
                   <Mail className="w-5 h-5" />
+                </a>
+                <a href="https://drive.google.com/file/d/1eAS8KV77d9jaCVnvledI5s-tVe2SJEAd/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900" title="Resume">
+                  <FileText className="w-5 h-5" />
                 </a>
               </div>
             </div>
